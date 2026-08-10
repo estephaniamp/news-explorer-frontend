@@ -1,5 +1,15 @@
 import "./NewsCard.css";
 
+function formatDate(dateString) {
+  const date = new Date(dateString);
+
+  return date.toLocaleDateString("es-MX", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
 function NewsCard({ article }) {
   return (
     <article className="news-card">
@@ -20,7 +30,7 @@ function NewsCard({ article }) {
       </div>
 
       <div className="news-card__content">
-        <p className="news-card__date">{article.publishedAt}</p>
+        <p className="news-card__date">{formatDate(article.publishedAt)}</p>
 
         <h3 className="news-card__title">{article.title}</h3>
 

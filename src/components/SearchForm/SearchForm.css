@@ -81,3 +81,11 @@
     border-radius: 100px;
   }
 }
+
+.search-form__error {
+  display: block;
+  margin: 8px 0 0 24px;
+  color: #ff0000;
+  font-size: 14px;
+  line-height: 18px;
+}

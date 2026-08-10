@@ -1,7 +1,7 @@
 import "./NewsCardList.css";
 import NewsCard from "../NewsCard/NewsCard";
 
-function NewsCardList({ articles }) {
+function NewsCardList({ articles, hasMore, onShowMore }) {
   return (
     <section className="news-card-list">
       <div className="news-card-list__container">
@@ -13,9 +13,15 @@ function NewsCardList({ articles }) {
           ))}
         </div>
 
-        <button className="news-card-list__more-button" type="button">
-          Mostrar más
-        </button>
+        {hasMore && (
+          <button
+            className="news-card-list__more-button"
+            type="button"
+            onClick={onShowMore}
+          >
+            Mostrar más
+          </button>
+        )}
       </div>
     </section>
   );

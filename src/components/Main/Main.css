@@ -19,3 +19,17 @@
     padding: 48px 16px 32px;
   }
 }
+
+.main__error {
+  padding: 80px 16px;
+  background-color: #f5f6f7;
+  text-align: center;
+}
+
+.main__error-text {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #b6bcbf;
+  font-size: 18px;
+  line-height: 24px;
+}
