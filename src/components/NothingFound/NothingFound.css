@@ -1,0 +1,34 @@
+.nothing-found {
+  padding: 86px 16px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f6f7;
+  text-align: center;
+}
+
+.nothing-found__icon {
+  width: 74px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #b6bcbf;
+  border-radius: 50%;
+  color: #b6bcbf;
+  font-size: 34px;
+}
+
+.nothing-found__title {
+  margin: 24px 0 16px;
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.nothing-found__text {
+  max-width: 360px;
+  margin: 0;
+  color: #b6bcbf;
+  font-size: 18px;
+  line-height: 24px;
+}

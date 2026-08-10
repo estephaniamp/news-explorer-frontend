@@ -1,0 +1,41 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: #1a1b22;
+  color: #ffffff;
+}
+
+.header__container {
+  max-width: 1232px;
+  min-height: 80px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .header__container {
+    min-height: 66px;
+    padding: 0 24px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .header__container {
+    min-height: 56px;
+    padding: 0 16px;
+  }
+
+  .header__logo {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

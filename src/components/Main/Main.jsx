@@ -1,0 +1,17 @@
+import "./Main.css";
+import SearchForm from "../SearchForm/SearchForm";
+import About from "../About/About";
+
+function Main() {
+  return (
+    <main className="main">
+      <section className="main__search">
+        <SearchForm />
+      </section>
+
+      <About />
+    </main>
+  );
+}
+
+export default Main;
