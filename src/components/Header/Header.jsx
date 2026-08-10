@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import Navigation from "../Navigation/Navigation";
 
-function Header() {
+function Header({ onLoginClick }) {
   return (
     <header className="header">
       <div className="header__container">
@@ -10,7 +10,7 @@ function Header() {
           NewsExplorer
         </Link>
 
-        <Navigation />
+        <Navigation onLoginClick={onLoginClick} />
       </div>
     </header>
   );

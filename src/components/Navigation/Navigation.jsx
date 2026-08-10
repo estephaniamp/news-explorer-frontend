@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 
-function Navigation() {
+function Navigation({ onLoginClick }) {
   return (
     <nav className="navigation">
       <NavLink
@@ -22,7 +22,11 @@ function Navigation() {
         Artículos guardados
       </NavLink>
 
-      <button className="navigation__button" type="button">
+      <button
+        className="navigation__button"
+        type="button"
+        onClick={onLoginClick}
+      >
         Inicia sesión
       </button>
     </nav>

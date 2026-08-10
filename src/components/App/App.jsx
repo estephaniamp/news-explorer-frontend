@@ -6,6 +6,7 @@ import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import SavedNews from "../SavedNews/SavedNews";
 import { getNews } from "../../utils/NewsApi";
+import PopupWithForm from "../PopupWithForm/PopupWithForm";
 
 const INITIAL_ARTICLES_COUNT = 3;
 const ARTICLES_STEP = 3;
@@ -42,6 +43,8 @@ function App() {
   const [keyword, setKeyword] = useState(
     () => localStorage.getItem("keyword") || "",
   );
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
 
   function handleSearch(searchKeyword) {
     setIsLoading(true);
@@ -85,9 +88,24 @@ function App() {
     setVisibleArticles((currentCount) => currentCount + ARTICLES_STEP);
   }
 
+  function handleLoginClick() {
+    setIsRegisterOpen(false);
+    setIsLoginOpen(true);
+  }
+
+  function handleRegisterClick() {
+    setIsLoginOpen(false);
+    setIsRegisterOpen(true);
+  }
+
+  function closeAllPopups() {
+    setIsLoginOpen(false);
+    setIsRegisterOpen(false);
+  }
+
   return (
     <div className="page">
-      <Header />
+      <Header onLoginClick={handleLoginClick} />
 
       <Routes>
         <Route
@@ -110,6 +128,98 @@ function App() {
       </Routes>
 
       <Footer />
+      <PopupWithForm
+        isOpen={isLoginOpen}
+        onClose={closeAllPopups}
+        title="Inicia sesión"
+        name="login"
+        buttonText="Inicia sesión"
+      >
+        <label className="popup__label">
+          Correo electrónico
+          <input
+            className="popup__input"
+            type="email"
+            name="email"
+            placeholder="Introduce tu correo electrónico"
+            required
+          />
+        </label>
+
+        <label className="popup__label">
+          Contraseña
+          <input
+            className="popup__input"
+            type="password"
+            name="password"
+            placeholder="Introduce tu contraseña"
+            required
+          />
+        </label>
+
+        <p className="popup__switch-text">
+          o{" "}
+          <button
+            className="popup__switch-button"
+            type="button"
+            onClick={handleRegisterClick}
+          >
+            Regístrate
+          </button>
+        </p>
+      </PopupWithForm>
+
+      <PopupWithForm
+        isOpen={isRegisterOpen}
+        onClose={closeAllPopups}
+        title="Regístrate"
+        name="register"
+        buttonText="Regístrate"
+      >
+        <label className="popup__label">
+          Correo electrónico
+          <input
+            className="popup__input"
+            type="email"
+            name="email"
+            placeholder="Introduce tu correo electrónico"
+            required
+          />
+        </label>
+
+        <label className="popup__label">
+          Contraseña
+          <input
+            className="popup__input"
+            type="password"
+            name="password"
+            placeholder="Introduce tu contraseña"
+            required
+          />
+        </label>
+
+        <label className="popup__label">
+          Nombre
+          <input
+            className="popup__input"
+            type="text"
+            name="name"
+            placeholder="Introduce tu nombre"
+            required
+          />
+        </label>
+
+        <p className="popup__switch-text">
+          o{" "}
+          <button
+            className="popup__switch-button"
+            type="button"
+            onClick={handleLoginClick}
+          >
+            Inicia sesión
+          </button>
+        </p>
+      </PopupWithForm>
     </div>
   );
 }

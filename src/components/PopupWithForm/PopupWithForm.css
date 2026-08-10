@@ -80,3 +80,42 @@
     right: 16px;
   }
 }
+
+.popup__label {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #2f71e5;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.popup__input {
+  min-height: 36px;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid #d1d2d6;
+  outline: none;
+  color: #1a1b22;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.popup__input:focus {
+  border-bottom-color: #2f71e5;
+}
+
+.popup__switch-text {
+  margin: 16px 0 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.popup__switch-button {
+  padding: 0;
+  background: transparent;
+  color: #2f71e5;
+  cursor: pointer;
+}
