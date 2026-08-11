@@ -1,0 +1,28 @@
+.saved-news {
+  flex: 1;
+}
+
+.saved-news__content {
+  min-height: 300px;
+  padding: 40px;
+  background-color: #f5f6f7;
+}
+
+.saved-news__placeholder {
+  max-width: 1232px;
+  margin: 0 auto;
+  color: #b6bcbf;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .saved-news__content {
+    padding: 32px 24px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .saved-news__content {
+    padding: 24px 16px;
+  }
+}

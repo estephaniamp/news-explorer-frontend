@@ -1,0 +1,35 @@
+.main {
+  flex: 1;
+}
+
+.main__search {
+  padding: 80px 24px;
+  background-color: #1a1b22;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .main__search {
+    padding: 64px 24px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .main__search {
+    padding: 48px 16px 32px;
+  }
+}
+
+.main__error {
+  padding: 80px 16px;
+  background-color: #f5f6f7;
+  text-align: center;
+}
+
+.main__error-text {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #b6bcbf;
+  font-size: 18px;
+  line-height: 24px;
+}
