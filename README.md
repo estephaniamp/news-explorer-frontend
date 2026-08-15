@@ -1,16 +1,44 @@
-# React + Vite
+# News Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+News Explorer es una aplicación web desarrollada con React que permite buscar noticias mediante una API externa.
 
-Currently, two official plugins are available:
+## Proyecto publicado
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Puedes consultar la aplicación en línea:
 
-## React Compiler
+https://news-explorer-frontend-estephania.netlify.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+- React
+- JavaScript
+- HTML5
+- CSS3
+- React Router
+- Vite
+- News API
+- Fetch API
+- Local Storage
+- ESLint
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Funcionalidades
+
+- Buscar noticias por palabra clave.
+- Mostrar los resultados de búsqueda.
+- Mostrar inicialmente tres noticias.
+- Cargar tres noticias adicionales mediante el botón "Mostrar más".
+- Mostrar un preloader mientras se realiza la búsqueda.
+- Mostrar un mensaje cuando no se encuentran resultados.
+- Mostrar un mensaje cuando ocurre un error en la solicitud.
+- Guardar artículos en `localStorage`.
+- Consultar los artículos guardados.
+- Navegar entre la página principal y la sección de noticias guardadas.
+- Diseño adaptable a diferentes tamaños de pantalla.
+
+## Instalación
+
+Clona el repositorio:
+
+```bash
+git clone https://github.com/estephaniamp/news-explorer-frontend.git
+```
